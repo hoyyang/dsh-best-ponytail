@@ -17,6 +17,12 @@
   { "id": "S1-邮箱", "match": "@app.middleware" },
   { "id": "S1-邮箱", "match": "@app.exception" },
   { "id": "S1-邮箱", "match": "@limiter.limit" },
+  { "id": "S1-邮箱", "match": "+@app.get" },
+  { "id": "S1-邮箱", "match": "+@app.post" },
+  { "id": "S1-邮箱", "match": "+@app.middleware" },
+  { "id": "S1-邮箱", "match": "+@app.exception" },
+  { "id": "S1-邮箱", "match": "+@limiter.limit" },
+  { "id": "S6-凭据", "match": "token = 更快交付；上游实测成本" },
   { "id": "S3-内网IP", "match": "192.168.1.1" },
   { "id": "S5-个人路径", "match": "/home/u" }
 ]
