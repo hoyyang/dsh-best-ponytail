@@ -1,0 +1,56 @@
+{
+  "name": "dsh-ponytail",
+  "description": "ponytail as a DeepSeek Harness plugin: the laziest-senior-dev ruleset — 6 skills (ponytail/-review/-audit/-debt/-gain/-help), /ponytail lite|full|ultra|off session command, optional always-on ruleset injection (config mode, default off), full upstream tree vendored under upstream/. GitHub-only distribution (npm name taken by an unrelated package). Upstream: github.com/DietrichGebert/ponytail (MIT).",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoyyang/dsh-ponytail.git"
+  },
+  "homepage": "https://github.com/hoyyang/dsh-ponytail#readme",
+  "keywords": [
+    "deepseek",
+    "harness",
+    "dsh",
+    "dsh-plugin",
+    "cordis",
+    "ponytail",
+    "yagni",
+    "minimalism",
+    "skill-pack"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "files": [
+    "lib",
+    "skills",
+    "upstream",
+    "cordis.patch.yml",
+    "README.md",
+    "README.en.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "assets"
+  ],
+  "scripts": {
+    "build": "bash scripts/build.sh",
+    "test": "node test/smoke.mjs"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/schemastery": "^3.18.0"
+  },
+  "devDependencies": {
+    "@deepseek-ai/schemastery": "^3.18.0"
+  },
+  "bugs": {
+    "url": "https://github.com/hoyyang/dsh-ponytail/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

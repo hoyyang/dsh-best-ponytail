@@ -1,0 +1,10 @@
+# dsh-ponytail bundle 装配清单。
+# package.json 的 dsh.bundle.patch 指向本文件，缺了冷启动直接报错；勿删除。
+# config 全部可选：mode 默认 off = 不做常驻注入（skill 与 /ponytail 命令不受影响）。
+# 覆盖示例（在 profile 的 cordis.patch.yml 里）：
+#   - id: dsh-ponytail
+#     config: { mode: full }
+- insert:
+    - id: dsh-ponytail
+      name: 'dsh-ponytail'
+      config: {}
