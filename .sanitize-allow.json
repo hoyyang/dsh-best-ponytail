@@ -1,5 +1,6 @@
 [
-  { "id": "G1-历史作者", "match": "hoyyang\thoyyang@users.noreply.github.com" },
+  { "id": "G1-历史作者", "match": "hoyyang <hoyyang@users.noreply.github.com>" },
+  { "id": "S1-邮箱", "match": "thoyyang@users.noreply.github.com" },
   { "id": "S1-邮箱", "match": "user@example.com" },
   { "id": "S1-邮箱", "match": "a@b.co" },
   { "id": "S1-邮箱", "match": "john.doe@company.co.uk" },
