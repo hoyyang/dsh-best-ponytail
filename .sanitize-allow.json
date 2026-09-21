@@ -1,0 +1,22 @@
+[
+  { "id": "G1-历史作者", "match": "hoyyang\thoyyang@users.noreply.github.com" },
+  { "id": "S1-邮箱", "match": "user@example.com" },
+  { "id": "S1-邮箱", "match": "a@b.co" },
+  { "id": "S1-邮箱", "match": "john.doe@company.co.uk" },
+  { "id": "S1-邮箱", "match": "test+tag@domain.org" },
+  { "id": "S1-邮箱", "match": "in@email.com" },
+  { "id": "S1-邮箱", "match": "invalid..email@domain.com" },
+  { "id": "S1-邮箱", "match": ".invalid@domain.com" },
+  { "id": "S1-邮箱", "match": "user+tag@sub.domain.co.uk" },
+  { "id": "S1-邮箱", "match": "ok@ok.com" },
+  { "id": "S1-邮箱", "match": "a@x.com" },
+  { "id": "S1-邮箱", "match": "b@x.com" },
+  { "id": "S1-邮箱", "match": "nevil@evil.com" },
+  { "id": "S1-邮箱", "match": "@app.get" },
+  { "id": "S1-邮箱", "match": "@app.post" },
+  { "id": "S1-邮箱", "match": "@app.middleware" },
+  { "id": "S1-邮箱", "match": "@app.exception" },
+  { "id": "S1-邮箱", "match": "@limiter.limit" },
+  { "id": "S3-内网IP", "match": "192.168.1.1" },
+  { "id": "S5-个人路径", "match": "/home/u" }
+]
