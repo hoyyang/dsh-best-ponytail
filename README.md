@@ -64,6 +64,19 @@ dsh plugin add hoyyang/dsh-best-ponytail
 9. 回到默认：`/ponytail reset`
 10. 卸载：`dsh plugin remove dsh-best-ponytail`，进程外零残留
 
+## 日常使用
+
+- 装完后什么都不用做——编码任务里懒人阶梯自动可用，技能目录随时可见
+- 想 100% 覆盖写代码场景：把配置 `mode` 开成 `full`，每轮系统提示词都带着阶梯
+- 临时要极简：说「ponytail ultra」，agent 会先反问需求是否需要存在
+- 临时要温和：说「ponytail lite」，agent 照常实现但附一句更懒的替代方案
+- 写完想返工：说「review for over-engineering」，拿到删除清单再决定
+- 接手陌生仓库：先跑「audit this codebase」，按排名从高往低瘦
+- 长期项目：定期「ponytail debt」，欠账台账防止口头承诺蒸发
+- 汇报优化成果：说「ponytail gain」，拿上游基准计分板当参考
+- 忘了怎么用：说「ponytail help」，速查卡直接列出全部模式与命令
+- 多会话并行：每个会话的档位互相独立，`/ponytail off` 只影响当前会话
+
 ## 使用场景
 
 - **快速原型**——一句「做个 XX」不再带回 5 个依赖 3 层抽象，标库和原生特性能解决的不装包
@@ -79,6 +92,23 @@ dsh plugin add hoyyang/dsh-best-ponytail
 
 ## 输入与输出
 
+真实回显样例（会话内实拍）：
+
+```sh
+$ /ponytail status
+ponytail always-on injection: FULL (config default) — injected into the system prompt, effective next turn
+Skills (passive + explicit) are available regardless of this setting.
+Switch: /ponytail lite|full|ultra|off · /ponytail reset (back to config default: full)
+```
+
+```sh
+$ /ponytail ultra
+ponytail always-on injection set to ULTRA for THIS session — effective next turn.
+ponytail always-on injection: ULTRA (session override) — injected into the system prompt, effective next turn
+Skills (passive + explicit) are available regardless of this setting.
+Switch: /ponytail lite|full|ultra|off · /ponytail reset (back to config default: full)
+```
+
 | 你说 / 你敲 | 得到 |
 |---|---|
 | `/ponytail status` | 当前档位 + 来源 + 切换提示 |
@@ -89,6 +119,17 @@ dsh plugin add hoyyang/dsh-best-ponytail
 | 「ponytail debt」 | 全库 `ponytail:` 注释汇总台账 |
 | 「ponytail gain」 | 上游基准计分板（-54% 代码 / -20% 成本 / -27% 耗时） |
 | 「stop ponytail」 | 本会话回到自然风格 |
+
+## 产出
+
+- **最小实现 diff**——阶梯通过后的最短可用改动，不带没人要的抽象层
+- **skipped 一行说明**——每次偷懒都留痕：跳过了什么、什么时候该加回来
+- **review 删除清单**——每条一行：位置 / 删什么 / 换成什么
+- **audit 排名报告**——全仓过度工程优先级排名，可直接当重构 backlog
+- **debt 欠账台账**——全库 `ponytail:` 注释的汇总清单，含升级路径
+- **gain 计分板**——上游基准中位数：代码 -54% / 成本 -20% / 耗时 -27%
+- **status 状态文本**——当前档位、来源、切换方法的即时回显
+- **installable tgz**——GitHub Release 预构建包，`dsh plugin add` 一条命令装机
 
 ## 进阶用法（配置）
 

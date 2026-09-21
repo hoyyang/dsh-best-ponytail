@@ -64,6 +64,19 @@ Zero config, zero behavior change on install: the always-on injection defaults t
 9. Back to default: `/ponytail reset`
 10. Uninstall: `dsh plugin remove dsh-best-ponytail` — nothing left behind
 
+## Everyday use
+
+- Install and do nothing — the ladder is available in coding tasks, skills visible in the catalog
+- For 100% coding coverage: set config `mode` to `full`, every turn carries the ladder
+- Want minimalist now: say "ponytail ultra" — the agent questions whether the requirement should exist at all
+- Want gentle now: say "ponytail lite" — normal build plus one lazier alternative
+- Rework after the fact: say "review for over-engineering" and decide from the deletion list
+- Inheriting an unfamiliar repo: run "audit this codebase" first, slim top-down by rank
+- Long-lived projects: periodic "ponytail debt" keeps verbal promises from evaporating
+- Reporting savings: say "ponytail gain" for the upstream benchmark scoreboard
+- Forgot the commands: say "ponytail help" — the quick-reference card lists everything
+- Parallel sessions: levels are per-session; `/ponytail off` affects only the current one
+
 ## Use cases
 
 - **Rapid prototyping** — "build me X" no longer returns five dependencies and three layers of abstraction
@@ -79,6 +92,23 @@ Zero config, zero behavior change on install: the always-on injection defaults t
 
 ## Input / output
 
+Live echo samples (captured in-session):
+
+```sh
+$ /ponytail status
+ponytail always-on injection: FULL (config default) — injected into the system prompt, effective next turn
+Skills (passive + explicit) are available regardless of this setting.
+Switch: /ponytail lite|full|ultra|off · /ponytail reset (back to config default: full)
+```
+
+```sh
+$ /ponytail ultra
+ponytail always-on injection set to ULTRA for THIS session — effective next turn.
+ponytail always-on injection: ULTRA (session override) — injected into the system prompt, effective next turn
+Skills (passive + explicit) are available regardless of this setting.
+Switch: /ponytail lite|full|ultra|off · /ponytail reset (back to config default: full)
+```
+
 | You say / type | You get |
 |---|---|
 | `/ponytail status` | current level + source + how to switch |
@@ -89,6 +119,17 @@ Zero config, zero behavior change on install: the always-on injection defaults t
 | "ponytail debt" | ledger of every `ponytail:` marker |
 | "ponytail gain" | upstream benchmark scoreboard (-54% LOC / -20% cost / -27% time) |
 | "stop ponytail" | natural style for this session |
+
+## Outputs
+
+- **Minimal diff** — the shortest working change the ladder allows, no unrequested abstraction layers
+- **One skipped line** — every lazy cut is traceable: what was skipped, when to add it back
+- **Review deletion list** — one line per finding: location / what to cut / what replaces it
+- **Audit ranked report** — repo-wide over-engineering priorities, usable directly as a refactor backlog
+- **Debt ledger** — every `ponytail:` marker collected, each with its upgrade path
+- **Gain scoreboard** — upstream benchmark medians: -54% LOC / -20% cost / -27% time
+- **Status text** — instant echo of current level, source, and switch instructions
+- **Installable tgz** — prebuilt GitHub Release asset, one `dsh plugin add` away
 
 ## Advanced (config)
 
