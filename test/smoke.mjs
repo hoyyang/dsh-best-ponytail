@@ -1,5 +1,5 @@
 /**
- * dsh-ponytail smoke test — runs the real lib/index.js apply() against a mock ctx.
+ * dsh-best-ponytail smoke test — runs the real lib/index.js apply() against a mock ctx.
  * Asserts: provider lists 6 skills, skill body serves the ladder, section injection
  * honors config mode + session overrides, /ponytail command state machine works.
  * Zero cost, no host, no network.
@@ -16,7 +16,7 @@ const ctx = {
     commands: { register: (c) => reg.commands.push(c) },
 };
 
-assert.equal(name, 'dsh-ponytail');
+assert.equal(name, 'dsh-best-ponytail');
 const resolved = Config({ mode: 'off' });
 apply(ctx, resolved);
 
@@ -29,12 +29,12 @@ for (const expect of ['ponytail', 'ponytail-review', 'ponytail-audit', 'ponytail
     assert.ok(list.some((c) => c.name === expect), 'missing skill ' + expect);
 const main = await provider.get(list.find((c) => c.name === 'ponytail'));
 assert.ok(main.content.includes('The ladder'), 'ponytail body serves the ladder');
-assert.ok(list.every((c) => c.provider === 'dsh-ponytail' && c.description.length > 10), 'candidates well-formed');
+assert.ok(list.every((c) => c.provider === 'dsh-best-ponytail' && c.description.length > 10), 'candidates well-formed');
 
 // 2) section registered even in off mode; empty text when off
 assert.equal(reg.sections.length, 1);
 const section = reg.sections[0];
-assert.equal(section.name, 'dsh-ponytail:ruleset');
+assert.equal(section.name, 'dsh-best-ponytail:ruleset');
 const sid = (id) => ({ agent: { session: { id } } });
 assert.equal(section.text(sid('s1')), '', 'off mode injects nothing');
 
@@ -57,4 +57,4 @@ assert.equal(section.text(sid('s1')), '', 'reset returns to config default (off)
 const bad = cmd.handler({ rawInput: 'nonsense', agent: { session: { id: 's1' } } });
 assert.ok(bad.text.includes('Valid:'), 'unknown level fails loud with usage');
 
-console.log('dsh-ponytail smoke test PASS (6 skills, section + command state machine verified)');
+console.log('dsh-best-ponytail smoke test PASS (6 skills, section + command state machine verified)');

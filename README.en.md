@@ -1,26 +1,26 @@
-# dsh-ponytail
+# dsh-best-ponytail
 
 ![banner](assets/banner.svg)
 
 [Ponytail](https://github.com/DietrichGebert/ponytail) (MIT) packaged for DeepSeek Harness: your AI agent now thinks like the laziest senior dev in the room — **the best code is the code you never write**.
 
-[**中文**](README.md) · [Releases](https://github.com/hoyyang/dsh-ponytail/releases) · [Changelog](CHANGELOG.md)
+[**中文**](README.md) · [Releases](https://github.com/hoyyang/dsh-best-ponytail/releases) · [Changelog](CHANGELOG.md)
 
 <p align="center">
   <img src="https://img.shields.io/badge/dsh-0.1.5%2B%20tested-2563eb" alt="dsh">
-  <img src="https://img.shields.io/github/v/release/hoyyang/dsh-ponytail" alt="release">
-  <img src="https://img.shields.io/github/stars/hoyyang/dsh-ponytail" alt="stars">
-  <img src="https://img.shields.io/github/last-commit/hoyyang/dsh-ponytail" alt="last commit">
+  <img src="https://img.shields.io/github/v/release/hoyyang/dsh-best-ponytail" alt="release">
+  <img src="https://img.shields.io/github/stars/hoyyang/dsh-best-ponytail" alt="stars">
+  <img src="https://img.shields.io/github/last-commit/hoyyang/dsh-best-ponytail" alt="last commit">
   <img src="https://img.shields.io/badge/license-MIT-green" alt="license">
 </p>
 
 ## Install
 
 ```sh
-dsh plugin add hoyyang/dsh-ponytail
+dsh plugin add hoyyang/dsh-best-ponytail
 ```
 
-Zero config, zero behavior change on install: the always-on injection defaults to off, and all six skills are usable immediately. Tested on dsh 0.1.5. GitHub-only distribution (the npm name is taken by an unrelated package; the GitHub channel is fully functional).
+Zero config, zero behavior change on install: the always-on injection defaults to off, and all six skills are usable immediately. Tested on dsh 0.1.5. Dual-channel distribution: npm as dsh-best-ponytail (the original name dsh-ponytail is taken by an unrelated package) + GitHub.
 
 ## What you get
 
@@ -53,7 +53,7 @@ Zero config, zero behavior change on install: the always-on injection defaults t
 
 ## 30-second start
 
-1. Run `dsh plugin add hoyyang/dsh-ponytail`
+1. Run `dsh plugin add hoyyang/dsh-best-ponytail`
 2. Configure nothing — six skills are already in the catalog
 3. Verify: say "ponytail, build me a small X" — the reply should end with `skipped: X, add when Y`
 4. Check the level: type `/ponytail status`
@@ -62,7 +62,7 @@ Zero config, zero behavior change on install: the always-on injection defaults t
 7. Review debt: say "ponytail debt"
 8. Silence for this session: `/ponytail off`
 9. Back to default: `/ponytail reset`
-10. Uninstall: `dsh plugin remove dsh-ponytail` — nothing left behind
+10. Uninstall: `dsh plugin remove dsh-best-ponytail` — nothing left behind
 
 ## Use cases
 
@@ -95,7 +95,7 @@ Zero config, zero behavior change on install: the always-on injection defaults t
 The always-on level lives in the profile config (default off):
 
 ```yaml
-- id: dsh-ponytail
+- id: dsh-best-ponytail
   config:
     mode: full   # off | lite | full | ultra
 ```
@@ -115,13 +115,13 @@ A bundle plugin mapping upstream concepts onto DSH: `skills/` are served through
 - **Compatibility** — tested on dsh 0.1.5 web profile; degrades with a warning on profiles missing services
 - **Upgrade safety** — profile edits are backed up (.bak-timestamp) before writing
 - **Clear attribution** — upstream MIT declared separately; adapter code is a single lib/index.js
-- **Known limits** — gains concentrate where agents over-build; near zero on already-minimal code; the npm name is taken by an unrelated package, hence GitHub-only
+- **Known limits** — gains concentrate where agents over-build; near zero on already-minimal code; the npm name dsh-ponytail is taken by an unrelated package, hence renamed to dsh-best-ponytail
 
 ## FAQ
 
 **Why nothing changed after install?** — `mode` defaults to off: the skills are active (passive + explicit), the always-on injection needs opting in. Minimal surprise by design.
 
-**Related to the npm package dsh-ponytail?** — No. That is an independent third-party implementation (ccll, 2026-08); this package skipped npm over the name clash and ships fully via GitHub.
+**Related to the npm package dsh-ponytail?** — No. That is an independent third-party implementation (ccll, 2026-08); this package renamed to dsh-best-ponytail for npm and ships via both channels.
 
 **Does passive triggering miss?** — Sometimes; that is the physical ceiling of on-demand skill loading. Set `mode` to `full` for 100% coverage while coding.
 

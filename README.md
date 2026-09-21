@@ -1,26 +1,26 @@
-# dsh-ponytail
+# dsh-best-ponytail
 
 ![banner](assets/banner.svg)
 
 把 [ponytail](https://github.com/DietrichGebert/ponytail)（MIT）装进 DeepSeek Harness：让 AI agent 像屋里最懒的资深工程师那样写代码——**最好的代码是你永远不用写的那行**。
 
-[**English**](README.en.md) · [Releases](https://github.com/hoyyang/dsh-ponytail/releases) · [更新日志](CHANGELOG.md)
+[**English**](README.en.md) · [Releases](https://github.com/hoyyang/dsh-best-ponytail/releases) · [更新日志](CHANGELOG.md)
 
 <p align="center">
   <img src="https://img.shields.io/badge/dsh-0.1.5%2B%20实测-2563eb" alt="dsh">
-  <img src="https://img.shields.io/github/v/release/hoyyang/dsh-ponytail" alt="release">
-  <img src="https://img.shields.io/github/stars/hoyyang/dsh-ponytail" alt="stars">
-  <img src="https://img.shields.io/github/last-commit/hoyyang/dsh-ponytail" alt="last commit">
+  <img src="https://img.shields.io/github/v/release/hoyyang/dsh-best-ponytail" alt="release">
+  <img src="https://img.shields.io/github/stars/hoyyang/dsh-best-ponytail" alt="stars">
+  <img src="https://img.shields.io/github/last-commit/hoyyang/dsh-best-ponytail" alt="last commit">
   <img src="https://img.shields.io/badge/license-MIT-green" alt="license">
 </p>
 
 ## 安装
 
 ```sh
-dsh plugin add hoyyang/dsh-ponytail
+dsh plugin add hoyyang/dsh-best-ponytail
 ```
 
-零配置开箱即用：装上后默认零行为改变（常驻注入缺省关闭，6 个技能即刻可用）。实测最低 dsh 版本 0.1.5。仅 GitHub 分发（npm 同名包已被占用，GitHub 渠道功能完整）。
+零配置开箱即用：装上后默认零行为改变（常驻注入缺省关闭，6 个技能即刻可用）。实测最低 dsh 版本 0.1.5。npm 包名 dsh-best-ponytail（原名 dsh-ponytail 被第三方占用故改名）+ GitHub 双渠道分发。
 
 ## 有啥用
 
@@ -53,7 +53,7 @@ dsh plugin add hoyyang/dsh-ponytail
 
 ## 30 秒上手
 
-1. 执行 `dsh plugin add hoyyang/dsh-ponytail`
+1. 执行 `dsh plugin add hoyyang/dsh-best-ponytail`
 2. 什么也不用配——6 个技能已进技能目录，编码任务自动可用
 3. 想验证：对 agent 说「ponytail，帮我写个 XX」，回复结尾应出现 `skipped: X, add when Y`
 4. 想看档位：输入框敲 `/ponytail status`
@@ -62,7 +62,7 @@ dsh plugin add hoyyang/dsh-ponytail
 7. 想查技术债：说「ponytail debt」
 8. 单会话免打扰：`/ponytail off`
 9. 回到默认：`/ponytail reset`
-10. 卸载：`dsh plugin remove dsh-ponytail`，进程外零残留
+10. 卸载：`dsh plugin remove dsh-best-ponytail`，进程外零残留
 
 ## 使用场景
 
@@ -95,7 +95,7 @@ dsh plugin add hoyyang/dsh-ponytail
 常驻注入档位在 profile 配置里调（缺省 off）：
 
 ```yaml
-- id: dsh-ponytail
+- id: dsh-best-ponytail
   config:
     mode: full   # off | lite | full | ultra
 ```
@@ -115,13 +115,13 @@ bundle 插件三层映射上游概念：`skills/` 经 `ctx.skills` provider 注�
 - **兼容性**：实测 dsh 0.1.5 web profile；headless profile 缺 services 时降级并告警
 - **升级安全**：profile 配置改动先备份（.bak-时间戳）再落盘，可一键还原
 - **归属清晰**：上游 MIT 独立声明，适配层代码仅 lib/index.js 一个文件
-- **已知限制**：收益集中在 agent 过度建设场景，代码本已精简时收益趋零；npm 同名包被第三方占用，故仅 GitHub 分发
+- **已知限制**：收益集中在 agent 过度建设场景，代码本已精简时收益趋零；npm 名 dsh-ponytail 被第三方占用，故改名 dsh-best-ponytail 发布
 
 ## 常见问题
 
 **装完为什么没变化？**——默认 `mode: off`：技能已可用（被动触发 + 显式点名），常驻注入需显式开启。这是有意的最小惊讶设计。
 
-**和 npm 上那个 dsh-ponytail 什么关系？**——无关联。那是第三方独立实现（ccll，2026-08）；本包因重名放弃 npm 渠道，GitHub 分发功能完整。
+**和 npm 上那个 dsh-ponytail 什么关系？**——无关联。那是第三方独立实现（ccll，2026-08）；本包因重名改名 dsh-best-ponytail 发布（npm + GitHub 双渠道）。
 
 **被动触发会漏吗？**——会，这是所有按需加载 skill 的物理上限。要写代码 100% 在规则之下，把 `mode` 开成 `full`。
 

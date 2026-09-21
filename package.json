@@ -1,5 +1,5 @@
 {
-  "name": "dsh-ponytail",
+  "name": "dsh-best-ponytail",
   "description": "ponytail as a DeepSeek Harness plugin: the laziest-senior-dev ruleset — 6 skills (ponytail/-review/-audit/-debt/-gain/-help), /ponytail lite|full|ultra|off session command, optional always-on ruleset injection (config mode, default off), full upstream tree vendored under upstream/. GitHub-only distribution (npm name taken by an unrelated package). Upstream: github.com/DietrichGebert/ponytail (MIT).",
   "version": "0.1.0",
   "type": "module",
@@ -7,9 +7,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hoyyang/dsh-ponytail.git"
+    "url": "git+https://github.com/hoyyang/dsh-best-ponytail.git"
   },
-  "homepage": "https://github.com/hoyyang/dsh-ponytail#readme",
+  "homepage": "https://github.com/hoyyang/dsh-best-ponytail#readme",
   "keywords": [
     "deepseek",
     "harness",
@@ -48,7 +48,7 @@
     "@deepseek-ai/schemastery": "^3.18.0"
   },
   "bugs": {
-    "url": "https://github.com/hoyyang/dsh-ponytail/issues"
+    "url": "https://github.com/hoyyang/dsh-best-ponytail/issues"
   },
   "publishConfig": {
     "access": "public"
