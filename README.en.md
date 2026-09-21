@@ -17,7 +17,8 @@
 ## Install
 
 ```sh
-dsh plugin add hoyyang/dsh-best-ponytail
+dsh plugin add dsh-best-ponytail   # npm channel (the exclusive install name)
+dsh plugin add github:hoyyang/dsh-best-ponytail   # or via GitHub
 ```
 
 Zero config, zero behavior change on install: the always-on injection defaults to off, and all six skills are usable immediately. Tested on dsh 0.1.5. Dual-channel distribution: npm as dsh-best-ponytail (the original name dsh-ponytail is taken by an unrelated package) + GitHub.
@@ -53,7 +54,7 @@ Zero config, zero behavior change on install: the always-on injection defaults t
 
 ## 30-second start
 
-1. Run `dsh plugin add hoyyang/dsh-best-ponytail`
+1. Run `dsh plugin add dsh-best-ponytail`
 2. Configure nothing — six skills are already in the catalog
 3. Verify: say "ponytail, build me a small X" — the reply should end with `skipped: X, add when Y`
 4. Check the level: type `/ponytail status`

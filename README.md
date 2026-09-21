@@ -17,7 +17,8 @@
 ## 安装
 
 ```sh
-dsh plugin add hoyyang/dsh-best-ponytail
+dsh plugin add dsh-best-ponytail   # npm 渠道（独占安装名）
+dsh plugin add github:hoyyang/dsh-best-ponytail   # 或 GitHub 渠道
 ```
 
 零配置开箱即用：装上后默认零行为改变（常驻注入缺省关闭，6 个技能即刻可用）。实测最低 dsh 版本 0.1.5。npm 包名 dsh-best-ponytail（原名 dsh-ponytail 被第三方占用故改名）+ GitHub 双渠道分发。
@@ -53,7 +54,7 @@ dsh plugin add hoyyang/dsh-best-ponytail
 
 ## 30 秒上手
 
-1. 执行 `dsh plugin add hoyyang/dsh-best-ponytail`
+1. 执行 `dsh plugin add dsh-best-ponytail`
 2. 什么也不用配——6 个技能已进技能目录，编码任务自动可用
 3. 想验证：对 agent 说「ponytail，帮我写个 XX」，回复结尾应出现 `skipped: X, add when Y`
 4. 想看档位：输入框敲 `/ponytail status`
